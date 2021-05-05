@@ -40,7 +40,9 @@ const Header = () => {
           <span>SERIES</span>
         </a>
       </div>
-      <img src={userPhoto} alt='' className='header-user-image' />
+      <div className='user-image-container'>
+        <img src={userPhoto} alt='' className='header-user-image' />
+      </div>
     </nav>
   );
 };
