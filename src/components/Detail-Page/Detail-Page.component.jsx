@@ -30,9 +30,11 @@ const DetailPage = () => {
       </div>
       <div className='subtitle'>2018 . 160m . Sci-Fi, Fantasy, Action, Thriller</div>
       <div className='description'>
-        The Star Wars franchise depicts the adventures of characters "A long time ago in a galaxy far, far away", in
-        which humans and many species of aliens (often humanoid) co-exist with robots, or 'droids', who may assist them
-        in their daily routines; space travel between planets is common due to lightspeed hyperspace
+        <p>
+          The Star Wars franchise depicts the adventures of characters "A long time ago in a galaxy far, far away", in
+          which humans and many species of aliens (often humanoid) co-exist with robots, or 'droids', who may assist
+          them in their daily routines; space travel between planets is common due to lightspeed hyperspace
+        </p>
       </div>
     </div>
   );

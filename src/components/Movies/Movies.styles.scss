@@ -1,8 +1,13 @@
 .movie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   .movie-content {
     display: grid;
     grid-gap: 25px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-bottom: 200px;
 
     .movie-wrapper {
       cursor: pointer;
