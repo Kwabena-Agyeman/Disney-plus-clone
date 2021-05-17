@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import Header from './components/Header/Header.component';
 import Home from './components/Home/Home.component';
 import DetailPage from './components/Detail-Page/Detail-Page.component.jsx';
@@ -18,7 +19,7 @@ function App() {
           <Route exact path='/'>
             <Home />
           </Route>
-          <Route exact path='/detail'>
+          <Route exact path='/detail/:id'>
             <DetailPage />
           </Route>
         </Switch>

@@ -9,7 +9,7 @@ const LoginPage = () => {
     <div className='Login-container'>
       <div className='CTA-box'>
         <img src={CTA1} alt='' className='cta-logo-one' />
-        <a className='cta-link' href='/#'>
+        <a className='cta-link' href='#'>
           AVALIABLE ON DISNEY PLUS
         </a>
         <div className='cta-description'>

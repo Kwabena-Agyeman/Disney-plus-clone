@@ -5,31 +5,36 @@ import Movies from '../Movies/Movies.component';
 
 import { connect } from 'react-redux';
 import { setMovies } from '../../Redux/Movies/Movies-Actions';
+import { Redirect } from 'react-router-dom';
 
 import db from '../../Firebase';
 
 import './home.styles.scss';
 
 const Home = (props) => {
-  const { setMovies } = props;
+  const { setMovies, user } = props;
+
   useEffect(() => {
-    db.collection('movies').onSnapshot((snapShot) => {
-      let tempMovies = snapShot.docs.map((doc) => {
+    db.collection('movies').onSnapshot(async (snapShot) => {
+      let tempMovies = await snapShot.docs.map((doc) => {
         return { id: doc.id, ...doc.data() };
       });
-      setMovies(tempMovies);
+      await setMovies(tempMovies);
     });
   }, []);
 
-  return (
-    <main className='home-container'>
-      <ImageSlider />
-      <Viewers />
-      <Movies />
-    </main>
-  );
+  if (user === null) {
+    return <Redirect to='/login' />;
+  } else {
+    return (
+      <main className='home-container'>
+        <ImageSlider />
+        <Viewers />
+        <Movies />
+      </main>
+    );
+  }
 };
-
 const mapDispatchToProps = (dispatch) => {
   return {
     setMovies: (movies) => {
@@ -38,4 +43,10 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(Home);
+const mapStateToProps = (state) => {
+  return {
+    user: state.UserReducer.user,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

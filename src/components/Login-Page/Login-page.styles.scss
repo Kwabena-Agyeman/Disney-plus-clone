@@ -12,6 +12,11 @@
     width: 90%;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 900px) {
+      max-width: 320px;
+      padding: 0;
+    }
   }
 
   .cta-link {
@@ -30,6 +35,10 @@
     &:hover {
       background-color: #0483ee;
     }
+
+    @media screen and (max-width: 900px) {
+      font-size: 13px;
+    }
   }
 
   .cta-description {
@@ -38,5 +47,9 @@
     letter-spacing: 1.4px;
     line-height: 1.5;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 900px) {
+      font-size: 13px;
+    }
   }
 }

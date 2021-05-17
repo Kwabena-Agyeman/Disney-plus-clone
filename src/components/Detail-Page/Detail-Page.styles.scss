@@ -1,11 +1,9 @@
 .DetailPage-container {
   min-height: calc(100vh - 70px);
   padding: 0 36px;
-  // background: url('https://www.xtrafondos.com/wallpapers/star-wars-el-ascenso-de-skywalker-4233.jpg') center center /
-  //   cover no-repeat fixed;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('https://www.xtrafondos.com/wallpapers/star-wars-el-ascenso-de-skywalker-4233.jpg') no-repeat center
-      center/cover;
+  // background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  //   url('https://www.xtrafondos.com/wallpapers/star-wars-el-ascenso-de-skywalker-4233.jpg') no-repeat center
+  //     center/cover;
 }
 
 .Image-title {
@@ -24,6 +22,12 @@
 .movie-controls {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
 
 button {
@@ -40,6 +44,11 @@ button {
     letter-spacing: 1.8px;
     cursor: pointer;
 
+    @media screen and (max-width: 900px) {
+      margin-bottom: 15px;
+      font-size: 12px;
+    }
+
     &:hover {
       background-color: whitesmoke;
     }
@@ -54,11 +63,16 @@ button {
     padding: 0 24px;
     margin-right: 22px;
     font-size: 15px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
     border: none;
     color: rgb(249, 249, 249);
     letter-spacing: 1.8px;
     cursor: pointer;
+
+    @media screen and (max-width: 900px) {
+      margin-bottom: 15px;
+      font-size: 12px;
+    }
 
     &:hover {
       background-color: rgb(50, 50, 50);
@@ -76,6 +90,10 @@ button {
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     margin-right: 16px;
+
+    @media screen and (max-width: 900px) {
+      margin-bottom: 15px;
+    }
 
     &:hover {
       background-color: rgb(50, 50, 50);
@@ -110,6 +128,10 @@ button {
   font-size: 15px;
   min-height: 20px;
   margin-top: 26px;
+
+  @media screen and (max-width: 900px) {
+    font-size: 13px;
+  }
 }
 
 .description {
@@ -118,4 +140,8 @@ button {
   margin-top: 16px;
   color: rgb(249, 249, 249);
   max-width: 650px;
+
+  @media screen and (max-width: 900px) {
+    font-size: 16px;
+  }
 }

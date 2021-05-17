@@ -10,7 +10,7 @@ import view5 from '../../Assets/images/viewers-starwars.png';
 const Viewers = () => {
   return (
     <div className='viewers-container'>
-      <div className='viewers-wrapper'>
+      <div className='viewers-wrapper disney'>
         <img src={view1} alt='' />
       </div>
       <div className='viewers-wrapper'>
